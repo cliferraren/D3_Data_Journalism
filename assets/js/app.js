@@ -31,13 +31,13 @@ var chart= svg.append("g")
 // Append a div to the body to create tooltips, assign it a class
 d3.select(".chart").append("div").attr("class", "tooltip").style("opacity", 0);
 
-// Load data from data.csv file (poverty vs physical activity)
+// Load data from data.csv file (poverty vs Exercise Activity)
 d3.csv("data/Final_Cleaned_Data/data.csv", function(err, healthData) {
 
     // Throw an error if one exists
     if (err) throw err;
 
-    // Cast the poverty value and physical activity metric value for each piece of healthData
+    // Cast the poverty value and Exercise Activity metric value for each piece of healthData
     healthData.forEach(function(data) {
         data.poverty = +data.poverty;
         data.phys_act = +data.phys_act;
